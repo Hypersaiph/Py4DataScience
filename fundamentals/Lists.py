@@ -8,7 +8,7 @@ list_2 = ["yolo", 139, 478, False, not False, 24, 578, 4567.99]
 
 print(type(list_2))
 
-list_3 = ['is it o k?', not True, list]
+list_3 = ['is it ok?', not True, list]
 
 print(type(list_3))
 
