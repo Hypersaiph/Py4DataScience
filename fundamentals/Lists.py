@@ -34,7 +34,7 @@ w[-3] = ':3'
 print(w)
 
 # slicing
-wii = ['A','B','C','D','E','F','G','H','I','j']
+wii = ['A','B','C','D','E','F','G','H','I','J']
 # everything
 print(wii[:])
 # starting from 2
@@ -54,3 +54,5 @@ print(wii[2:9:2])
 # everything, step by 2
 print(wii[::2])
 
+# step of -1, reverses the list
+print(wii[::-1])
