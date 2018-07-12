@@ -65,10 +65,26 @@ DwayneWade_MP = [2892, 1931, 1954, 3048, 2792, 2823, 1625, 2391, 1775, 1971]
 MinutesPlayed = np.array(
     [KobeBryant_MP, JoeJohnson_MP, LeBronJames_MP, CarmeloAnthony_MP, DwightHoward_MP, ChrisBosh_MP, ChrisPaul_MP,
      KevinDurant_MP, DerrickRose_MP, DwayneWade_MP])
+# Field Goal Attempts
+KobeBryant_FGA = [2173, 1757, 1690, 1712, 1569, 1639, 1336, 1595, 73, 713]
+JoeJohnson_FGA = [1395, 1139, 1497, 1420, 1386, 1161, 931, 1052, 1018, 1025]
+LeBronJames_FGA = [1823, 1621, 1642, 1613, 1528, 1485, 1169, 1354, 1353, 1279]
+CarmeloAnthony_FGA = [1572, 1453, 1481, 1207, 1502, 1503, 1025, 1489, 1643, 806]
+DwightHoward_FGA = [881, 873, 974, 979, 834, 1044, 726, 813, 800, 423]
+ChrisBosh_FGA = [1087, 1094, 1027, 1263, 1158, 1056, 807, 907, 953, 745]
+ChrisPaul_FGA = [947, 871, 1291, 1255, 637, 928, 890, 856, 870, 1170]
+KevinDurant_FGA = [647, 647, 1366, 1390, 1668, 1538, 1297, 1433, 1688, 467]
+DerrickRose_FGA = [436, 436, 436, 1208, 1373, 1597, 695, 0, 164, 835]
+DwayneWade_FGA = [1413, 962, 937, 1739, 1511, 1384, 837, 1093, 761, 1084]
+# Matrix
+FieldGoalAttempts = np.array(
+    [KobeBryant_FGA, JoeJohnson_FGA, LeBronJames_FGA, CarmeloAnthony_FGA, DwightHoward_FGA, ChrisBosh_FGA,
+     ChrisPaul_FGA, KevinDurant_FGA, DerrickRose_FGA, DwayneWade_FGA])
+
 
 print(Salary[Pdict["LeBronJames"]][Sdict["2009"]])
 
 FieldGoalsPerGame = np.matrix.round(FieldGoals / Games)
 print(FieldGoalsPerGame[Pdict["KobeBryant"]][Sdict["2009"]])
 
-print(MinutesPlayed)
+print(np.matrix.round(FieldGoals / FieldGoalAttempts, 2)*100)
