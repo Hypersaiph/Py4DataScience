@@ -97,7 +97,7 @@ Points = np.array([KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAntho
                    ChrisPaul_PTS, KevinDurant_PTS, DerrickRose_PTS, DwayneWade_PTS])
 
 #data science
-# myplot(Salary, Players)
+ myplot(Salary, Players)
 # myplot(Games, Players)
 # myplot(Salary / Games, Players)
 # myplot(Salary / FieldGoals, Players)
