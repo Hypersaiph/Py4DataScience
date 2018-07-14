@@ -2,16 +2,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-
+import warnings
+warnings.filterwarnings('ignore')
 
 def myplot(data, playerList):
     colors = ['Black', 'Red', 'Green', 'Blue', 'Magenta']
     markers = ['s', 'o', '^', 'D']
     for name in playerList:
-        plt.plot(Games[Pdict[name]], c=random.choice(colors), ls='--', marker=random.choice(markers), ms=7, label=name)
+        plt.plot(data[Pdict[name]], c=random.choice(colors), ls='--', marker=random.choice(markers), ms=7, label=name)
 
     plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
     plt.xticks(list(range(0, 10)), Seasons, rotation='vertical')
+    plt.figure(figsize=(5,2))
     plt.show()
 
 
@@ -64,7 +66,42 @@ DwayneWade_FG = [699, 472, 439, 854, 719, 692, 416, 569, 415, 509]
 FieldGoals = np.array(
     [KobeBryant_FG, JoeJohnson_FG, LeBronJames_FG, CarmeloAnthony_FG, DwightHoward_FG, ChrisBosh_FG, ChrisPaul_FG,
      KevinDurant_FG, DerrickRose_FG, DwayneWade_FG])
+# Field Goal Attempts
+KobeBryant_FGA = [2173, 1757, 1690, 1712, 1569, 1639, 1336, 1595, 73, 713]
+JoeJohnson_FGA = [1395, 1139, 1497, 1420, 1386, 1161, 931, 1052, 1018, 1025]
+LeBronJames_FGA = [1823, 1621, 1642, 1613, 1528, 1485, 1169, 1354, 1353, 1279]
+CarmeloAnthony_FGA = [1572, 1453, 1481, 1207, 1502, 1503, 1025, 1489, 1643, 806]
+DwightHoward_FGA = [881, 873, 974, 979, 834, 1044, 726, 813, 800, 423]
+ChrisBosh_FGA = [1087, 1094, 1027, 1263, 1158, 1056, 807, 907, 953, 745]
+ChrisPaul_FGA = [947, 871, 1291, 1255, 637, 928, 890, 856, 870, 1170]
+KevinDurant_FGA = [647, 647, 1366, 1390, 1668, 1538, 1297, 1433, 1688, 467]
+DerrickRose_FGA = [436, 436, 436, 1208, 1373, 1597, 695, 0, 164, 835]
+DwayneWade_FGA = [1413, 962, 937, 1739, 1511, 1384, 837, 1093, 761, 1084]
+# Matrix
+FieldGoalAttempts = np.array(
+    [KobeBryant_FGA, JoeJohnson_FGA, LeBronJames_FGA, CarmeloAnthony_FGA, DwightHoward_FGA, ChrisBosh_FGA,
+     ChrisPaul_FGA, KevinDurant_FGA, DerrickRose_FGA, DwayneWade_FGA])
+# Points
+KobeBryant_PTS = [2832, 2430, 2323, 2201, 1970, 2078, 1616, 2133, 83, 782]
+JoeJohnson_PTS = [1653, 1426, 1779, 1688, 1619, 1312, 1129, 1170, 1245, 1154]
+LeBronJames_PTS = [2478, 2132, 2250, 2304, 2258, 2111, 1683, 2036, 2089, 1743]
+CarmeloAnthony_PTS = [2122, 1881, 1978, 1504, 1943, 1970, 1245, 1920, 2112, 966]
+DwightHoward_PTS = [1292, 1443, 1695, 1624, 1503, 1784, 1113, 1296, 1297, 646]
+ChrisBosh_PTS = [1572, 1561, 1496, 1746, 1678, 1438, 1025, 1232, 1281, 928]
+ChrisPaul_PTS = [1258, 1104, 1684, 1781, 841, 1268, 1189, 1186, 1185, 1564]
+KevinDurant_PTS = [903, 903, 1624, 1871, 2472, 2161, 1850, 2280, 2593, 686]
+DerrickRose_PTS = [597, 597, 597, 1361, 1619, 2026, 852, 0, 159, 904]
+DwayneWade_PTS = [2040, 1397, 1254, 2386, 2045, 1941, 1082, 1463, 1028, 1331]
+# Matrix
+Points = np.array([KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAnthony_PTS, DwightHoward_PTS, ChrisBosh_PTS,
+                   ChrisPaul_PTS, KevinDurant_PTS, DerrickRose_PTS, DwayneWade_PTS])
+
 #data science
-myplot(Salary, Players)
-#myplot(Salary / Games, Players)
-#myplot(Salary / FieldGoals, Players)
+# myplot(Salary, Players)
+# myplot(Games, Players)
+# myplot(Salary / Games, Players)
+# myplot(Salary / FieldGoals, Players)
+myplot(FieldGoals/Games,Players)
+myplot(FieldGoals/FieldGoalAttempts,Players)
+myplot(FieldGoalAttempts/Games,Players)
+myplot(Points/Games,Players)
