@@ -6,6 +6,7 @@ stats = pd.read_csv('DemographicData.csv')
 
 stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'IncomeGroup']
 
+# Math
 stats['MyCalc'] = stats.BirthRate * stats.InternetUsers
 
 print(stats.head())
