@@ -9,7 +9,7 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'In
 # Math
 stats['MyCalc'] = stats.BirthRate * stats.InternetUsers
 
-print(stats.head())
+#print(stats.head())
 
 # Removing Column
 stats = stats.drop('MyCalc', axis=1)
