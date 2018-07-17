@@ -26,10 +26,10 @@ stats = pd.read_csv('DemographicData.csv')
 #print(stats[['Country Name', 'Birth rate']].head())
 
 # Quick access
-#stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'IncomeGroup']
+stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'IncomeGroup']
 #print(stats.CountryCode)
 
 # P3. Com ining the two
 # subset 4:8, another subset's been applied
 #print(stats[4:8][['Country Name', 'Birth rate']])
-print(stats[['Country Name', 'Birth rate']][4:8])
+#print(stats[['Country Name', 'Birth rate']][4:8])
