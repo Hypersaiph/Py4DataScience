@@ -28,7 +28,7 @@ import os
 
 #print(stats.info()) # as in R
 
-#print(stats.describe())
+print(stats.describe())
 
-print(stats.describe().transpose())
+#print(stats.describe().transpose())
 
