@@ -22,10 +22,10 @@ print(y)
 
 # access to lists
 w = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-print(w[1])
-print(w[2])
-print(w[3])
-print(len(w))
+# print(w[1])
+# print(w[2])
+# print(w[3])
+# print(len(w))
 # negative indexation starts at the end of the list
 print(w[-1])
 print(w[-2])
